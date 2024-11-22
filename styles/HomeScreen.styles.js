@@ -1,77 +1,63 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  container: {
+  safeAreaContainer: {
     flex: 1,
-    padding: 20,
-    backgroundColor: '#F9F9F9', // Light background color to match the clean design
+    backgroundColor: "#fff",
+    paddingHorizontal: 20, // Add horizontal padding to the SafeAreaView
   },
-  searchArea: {
-    marginBottom: 20,
-    borderRadius: 25,
-    backgroundColor: '#F9F1E1', // Soft light color for search area background
-    paddingHorizontal: 15,
-    paddingVertical: 10,
+  greetingContainer: {
     flexDirection: 'row',
-    alignItems: 'center',
+    justifyContent: 'space-between',
+    alignItems: 'center', // Vertically align items
+    marginBottom: 20,
+    marginTop: 20,
   },
-  searchInput: {
-    flex: 1,  // Allow the input field to take the remaining space
-    height: 40,
+  greeting: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#401B01",
+  },
+  date: {
     fontSize: 16,
-    color: '#A8A8A8', // Light gray text color for placeholder
-    paddingLeft: 10, // Add space between the icon and text
+    color: "gray",
   },
-  widgetContainer: {
-    marginBottom: 30,
+  searchBarContainer: {
+    padding: 10,
+    backgroundColor: "#f8f8f8",
+    borderRadius: 8,
+    marginBottom: 20,
   },
-  widgetTitle: {
-    fontSize: 20,
-    fontWeight: 'bold',
+  searchText: {
+    fontSize: 16,
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: "bold",
     marginBottom: 10,
-    color: '#4A4A4A', // Dark gray for titles
+    marginTop: 20,
   },
-  roomCard: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginRight: 15,
+  roomsContainer: {
+    flexDirection: "row", // Horizontal layout
+    marginBottom: 20,
   },
   roomIcon: {
-    width: 50,
-    height: 50,
-    marginBottom: 10,
-    resizeMode: 'contain', // Make sure the icon fits well
+    alignItems: "center",
   },
-  roomTitle: {
-    fontSize: 14,
-    fontWeight: '500',
-    color: '#4A4A4A', // Dark gray for room names
+  icon: {
+    width: 60, // Adjust icon size as needed
+    height: 60, // Adjust icon size as needed
   },
-  itemCard: {
-    backgroundColor: '#FFFFFF',
-    padding: 15,
-    borderRadius: 12,
-    marginBottom: 15,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.1,
-    shadowRadius: 8,
-    elevation: 3,
-  },
-  itemName: {
-    fontSize: 16,
-    fontWeight: '500',
-    color: '#4A4A4A', // Dark gray for item names
-  },
-  itemRoom: {
-    fontSize: 14,
-    color: '#6B6B6B', // Lighter gray for room info
+  iconText: {
     marginTop: 5,
+    fontSize: 12,
   },
-  noItemsText: {
+  shoppingListContainer: {
+    marginBottom: 30,
+  },
+  itemText: {
     fontSize: 16,
-    color: '#888',
-    fontStyle: 'italic',
+    marginBottom: 10,
   },
 });
 

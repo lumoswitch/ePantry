@@ -1,4 +1,3 @@
-// /hooks/usePantryData.js
 import { useState } from 'react';
 
 // Custom hook to manage pantry data
