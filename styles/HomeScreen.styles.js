@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
   },
   roomsContainer: {
     flexDirection: "row", // Horizontal layout
+    justifyContent: "space-between",
     marginBottom: 20,
   },
   roomIcon: {
