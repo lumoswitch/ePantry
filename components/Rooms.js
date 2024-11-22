@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, Image, ScrollView } from 'react-native';
+import styles from "../styles/Rooms.styles";
 
 // Room icons
 import kitchenIcon from '../assets/images/kitchen.png';  // Replace with actual image paths
@@ -10,7 +11,10 @@ import bathroomIcon from '../assets/images/bathroom.png';
 const Rooms = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>ROOMS</Text>
+       <View style={styles.header}>
+        <Text style={styles.headerText}>ROOMS</Text>
+        <Text style={styles.seeAllText}>See all</Text>
+      </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.roomList}>
         <View style={styles.roomCard}>
           <Image source={kitchenIcon} style={styles.roomIcon} />
@@ -34,38 +38,3 @@ const Rooms = () => {
 };
 
 export default Rooms;
-
-const styles = StyleSheet.create({
-  container: {
-    marginTop: 20,
-  },
-  header: {
-    fontSize: 12,
-    fontWeight: 'bold',
-    color: '#BF6A02',  // Room section header color
-    marginBottom: 10,
-  },
-  roomList: {
-    flexDirection: 'row',
-    marginBottom: 20,
-  },
-  roomCard: {
-    alignItems: 'center',
-    marginRight: 15,
-    padding: 5,
-    borderRadius: 50, // Circular container
-    width: 90,
-    height: 90,
-    justifyContent: 'center',
-  },
-  roomIcon: {
-    width: 60,
-    height: 60,
-    marginBottom: 5,
-  },
-  roomLabel: {
-    fontSize: 12,
-    fontWeight: 'bold',
-    color: '#333',
-  },
-});

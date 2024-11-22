@@ -7,6 +7,7 @@ import styles from "../styles/HomeScreen.styles";
 import bellIcon from '../assets/images/notification-bell.png'; // Import the bell icon image
 import SearchBar from '../components/SearchBar';
 import Rooms from '../components/Rooms';
+import PantryListScreen from "../screens/PantryListScreen";
 
 const HomeScreen = () => {
   const { pantryItems, removeItem } = usePantryData();
@@ -20,11 +21,11 @@ const HomeScreen = () => {
     day: "numeric",
   });
 
-  const roomsData = [
-    { id: "1", name: "Kitchen", icon: require("../assets/images/kitchen.png") },
-    { id: "2", name: "Living Room", icon: require("../assets/images/living_room.png"), },
-    { id: "3", name: "Library", icon: require("../assets/images/library.png") },
-    { id: "4", name: "Bathroom", icon: require("../assets/images/bathroom.png"), },
+  const shoppingItems = [
+    { id: 1, title: 'Flour', subtitle: 'Kitchen', color: '#C4C4C4' },
+    { id: 2, title: 'Yeelight RGBW Bulb', subtitle: 'Living Room', color: '#F8D9C3' },
+    { id: 3, title: 'Harry Potter #1', subtitle: 'Library', color: '#D4ECD4' },
+    { id: 4, title: 'Shampoo', subtitle: 'Bathroom', color: '#C9E8F8' },
   ];
 
   return (
@@ -46,29 +47,10 @@ const HomeScreen = () => {
 
         {/* Rooms Section */}
         <Rooms />
-        {/* <Text style={styles.sectionTitle}>Rooms</Text>
-        <FlatList
-          data={roomsData}
-          horizontal
-          keyExtractor={(item) => item.id}
-          contentContainerStyle={styles.roomsContainer}
-          renderItem={({ item }) => (
-            <TouchableOpacity style={styles.roomIcon}>
-              <Image source={item.icon} style={styles.icon} />
-              <Text style={styles.iconText}>{item.name}</Text>
-            </TouchableOpacity>
-          )}
-        /> */}
 
         {/* Shopping List Section */}
-        <Text style={styles.sectionTitle}>Shopping List</Text>
-        <FlatList
-          data={pantryItems}
-          keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
-            <ProductCard name={item.name} room={item.room} color={item.color} />
-          )}
-        />
+        <ProductCard items={shoppingItems} />
+        
       </SafeAreaView>
     </SafeAreaProvider>
   );
