@@ -6,6 +6,7 @@ import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import styles from "../styles/HomeScreen.styles";
 import bellIcon from '../assets/images/notification-bell.png'; // Import the bell icon image
 import SearchBar from '../components/SearchBar';
+import Rooms from '../components/Rooms';
 
 const HomeScreen = () => {
   const { pantryItems, removeItem } = usePantryData();
@@ -44,7 +45,8 @@ const HomeScreen = () => {
         <SearchBar />
 
         {/* Rooms Section */}
-        <Text style={styles.sectionTitle}>Rooms</Text>
+        <Rooms />
+        {/* <Text style={styles.sectionTitle}>Rooms</Text>
         <FlatList
           data={roomsData}
           horizontal
@@ -56,7 +58,7 @@ const HomeScreen = () => {
               <Text style={styles.iconText}>{item.name}</Text>
             </TouchableOpacity>
           )}
-        />
+        /> */}
 
         {/* Shopping List Section */}
         <Text style={styles.sectionTitle}>Shopping List</Text>
