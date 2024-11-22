@@ -1,6 +1,5 @@
-// /components/ProductCard.js
 import React from 'react';
-import { View, Text, TouchableOpacity, Button } from 'react-native';
+import { View, Text, Button } from 'react-native';
 
 const ProductCard = ({ name, room, expirationDate, onPress, onRemove }) => {
   return (
